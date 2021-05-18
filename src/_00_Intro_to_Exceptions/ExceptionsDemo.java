@@ -14,14 +14,18 @@ public class ExceptionsDemo {
     public static void testFiveOrGreater(int x) throws Exception {
         if (x < 5) {
             // This is where the Exception is actually thrown.
-            throw new Exception();
+            throw new Exception("x is less than 5");
         }
     }
 
     public static void main(String[] args) {
 
         // 1. Create a try/catch block (Hint: type "try" and ctrl + space).
-
+    	try {
+			testFiveOrGreater(2);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
         /**
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
          * the try block.
@@ -37,7 +41,7 @@ public class ExceptionsDemo {
 
     }
 
-    /**
+    /*
      * 5. Create your own exception by making a new class called
      * NegativeNumberException that extends Exception.
      * 
@@ -45,8 +49,12 @@ public class ExceptionsDemo {
      * JOptionPane Message Dialog telling the user they have triggered a
      * critical error in their computer.
      */
-
-    /**
+    static void testPositive(double x) throws NegativeNumberException {
+    	if (x < 0) {
+    		throw new NegativeNumberException();
+    	}
+    }
+    /*
      * 7. Create a static method in this class called testPositive. It should
      * take a single number as a parameter and throw a NegativeNumberException
      * if that number is negative.
@@ -70,7 +78,7 @@ public class ExceptionsDemo {
      * 10. Try running the program. Did it show a pop-up?
      */
 
-    /**
+    /*
      * 11. Add a finally block after your catch block(Hint: finally{}). A
      * finally block always occurs after a try/catch block even if no exception
      * occurs.
