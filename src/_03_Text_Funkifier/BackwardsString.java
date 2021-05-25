@@ -13,7 +13,6 @@ public class BackwardsString implements TextFunkifier {
     @Override
     public String funkifyText() {
 
-        return null;
-
+    	return new StringBuilder(unfunkifiedText).reverse().toString();
     }
 }

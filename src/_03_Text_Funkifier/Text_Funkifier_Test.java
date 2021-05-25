@@ -44,6 +44,7 @@ public class Text_Funkifier_Test {
 
     @Test
     public void testCustomString() {
-
+    	LastFirstString lfs = new LastFirstString("cool beans is cool");
+    	assertEquals("CooL BeanS IS CooL", lfs.funkifyText());
     }
 }

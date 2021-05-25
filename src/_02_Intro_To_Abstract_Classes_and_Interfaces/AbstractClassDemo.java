@@ -8,7 +8,7 @@ package _02_Intro_To_Abstract_Classes_and_Interfaces;
  * other classes you are using, but would not be used on its own.
  * 
  * e.g. GameObject in LeagueInvaders would have been a good candidate for an
- * abstract class for its x,y,widthm and height member variables and its draw() 
+ * abstract class for its x,y,width and height member variables and its draw() 
  * and update() methods.
  */
 
@@ -38,7 +38,6 @@ public abstract class AbstractClassDemo {
      * requires a return statement that returns an appropriate value.
      */
     public abstract int abstractNumDemo();
-
     // An abstract class can still contain implemented methods.
     public void demo() {
         System.out.println("Demo");
